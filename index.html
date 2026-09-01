@@ -98,7 +98,19 @@
   &lt;groupId&gt;org.acemq&lt;/groupId&gt;
   &lt;artifactId&gt;acemq-amqp-core&lt;/artifactId&gt;
   &lt;version&gt;0.2.3&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+  &lt;groupId&gt;org.acemq&lt;/groupId&gt;
+  &lt;artifactId&gt;acemq-transport-rabbitmq&lt;/artifactId&gt;
+  &lt;version&gt;0.2.3&lt;/version&gt;
+  &lt;scope&gt;runtime&lt;/scope&gt;
 &lt;/dependency&gt;</code></pre>
+
+  <p class="note" style="color:var(--muted);font-size:.9rem;">
+     Both are needed. The transport is discovered at runtime from the
+     <code>amqp://</code> scheme in your URL, so your code never compiles against it —
+     but without it on the classpath a connection fails with
+     <em>no transport for scheme amqp</em>.</p>
 
   <h2>Artifacts</h2>
   <div class="card">
