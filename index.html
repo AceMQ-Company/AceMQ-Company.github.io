@@ -17,6 +17,10 @@
   main { max-width:52rem; margin:0 auto; padding:4rem 1.25rem 5rem; }
   header { margin-bottom:3rem; }
   h1 { font-size:2.4rem; margin:0 0 .4rem; letter-spacing:-.03em; }
+  .logo { height:52px; width:auto; display:block; margin:0 0 1.1rem; }
+  /* Black on transparent, so it vanishes on a dark page. Inverting suits a
+     two-tone mark and avoids shipping a second file. */
+  @media (prefers-color-scheme: dark) { .logo { filter: invert(1) brightness(1.15); } }
   .tagline { color:var(--muted); font-size:1.05rem; margin:0; max-width:38rem; }
   h2 { font-size:.8rem; text-transform:uppercase; letter-spacing:.09em;
     color:var(--muted); margin:3rem 0 1rem; font-weight:600; }
@@ -44,7 +48,7 @@
 </style>
 <main>
   <header>
-    <h1>AceMQ</h1>
+    <img class="logo" src="acemq.png" alt="AceMQ">
     <p class="tagline">Open-source messaging libraries, built on one idea: a message should
        never disappear quietly.</p>
   </header>
@@ -108,9 +112,19 @@
     </div>
   </div>
 
+  <h2>Support</h2>
+  <div class="card">
+    <h3><a href="https://acemq.com">AceMQ Enterprise support</a></h3>
+    <p>Architecture review, production readiness, TLS and permission design, and incident
+       response for RabbitMQ and for these libraries. The libraries are complete and free to
+       use without it, and are not crippled to sell it.</p>
+    <div class="links"><a href="https://acemq.com">acemq.com</a></div>
+  </div>
+
   <footer>
-    Apache-2.0. Issues and pull requests are welcome on the individual repositories.
-    <br>AceMQ also offers commercial support for RabbitMQ; these libraries are free to use
-    with or without it.
+    Apache-2.0, and provided without warranty of any kind — sections 7 and 8 of the licence.
+    Issues and pull requests are welcome on the individual repositories.
+    <br>RabbitMQ is a trademark of Broadcom Inc. and/or its subsidiaries. AceMQ is an
+    independent project and is not affiliated with or endorsed by Broadcom.
   </footer>
 </main>
