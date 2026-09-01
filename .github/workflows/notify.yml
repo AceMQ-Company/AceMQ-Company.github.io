@@ -1,0 +1,21 @@
+# Announces changes to the AceMQ landing page.
+#
+# The page is the front door: it is what someone sees first, and a change to it
+# is usually a change to what the organisation is claiming to offer. Worth a
+# line in Slack; there are not many of them.
+name: notify
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  notify:
+    uses: AceMQ-Company/acemq-java-amqp/.github/workflows/slack-notify.yml@main
+    with:
+      status: success
+      title: AceMQ landing page updated
+      message: The index of libraries, documentation and artifacts has changed.
+      url: https://acemq-company.github.io/
+    secrets: inherit
