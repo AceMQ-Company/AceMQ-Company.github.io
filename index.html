@@ -79,11 +79,56 @@
     </div>
   </div>
 
+  <div class="card">
+    <h3><a href="https://github.com/AceMQ-Company/acemq-java-amqp-spring-boot-starter">Spring Boot starter</a>
+        <span class="badge">unreleased</span></h3>
+    <p>Auto-configuration for the Java library: one connection, a declared topology,
+       annotated listeners, health and metrics — configured from application.yaml.
+       <strong>Spring Boot 3 and 4 from one artifact</strong>, and the auto-configure
+       module runs on Boot 2.7 as well.</p>
+    <div class="links">
+      <a href="https://acemq-company.github.io/acemq-java-amqp-spring-boot-starter/">Documentation</a>
+      <a href="https://acemq-company.github.io/acemq-java-amqp-spring-boot-starter/apidocs/">API reference</a>
+      <a href="https://github.com/AceMQ-Company/acemq-java-amqp-spring-boot-starter">GitHub</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://github.com/AceMQ-Company/acemq-java-rabbitmq-admin">RabbitMQ Admin</a>
+        <span class="badge live">0.1.0</span></h3>
+    <p>RabbitMQ's HTTP management API for Java: users, vhosts, permissions, policies,
+       federation and shovels, health checks, definitions export and import, and the
+       queue facts AMQP cannot report. Deliberately separate from the messaging
+       library, because nothing on a message path should depend on a
+       product-specific management endpoint.</p>
+    <div class="links">
+      <a href="https://acemq-company.github.io/acemq-java-rabbitmq-admin/">Documentation</a>
+      <a href="https://acemq-company.github.io/acemq-java-rabbitmq-admin/apidocs/">API reference</a>
+      <a href="https://github.com/AceMQ-Company/acemq-java-rabbitmq-admin">GitHub</a>
+      <a href="https://acemq-company.github.io/maven/">Artifacts</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://github.com/AceMQ-Company/acemq-java-amqp-workloads">Workloads</a>
+        <span class="badge">unreleased</span></h3>
+    <p>A load generator for AMQP brokers: a workload DSL, an open-loop rate schedule
+       that measures latency against intended send time rather than actual, and a
+       report that says what it measured rather than what you should conclude.</p>
+    <div class="links">
+      <a href="https://acemq-company.github.io/acemq-java-amqp-workloads/">Documentation</a>
+      <a href="https://acemq-company.github.io/acemq-java-amqp-workloads/apidocs/">API reference</a>
+      <a href="https://github.com/AceMQ-Company/acemq-java-amqp-workloads">GitHub</a>
+    </div>
+  </div>
+
   <div class="card planned">
     <h3>Ports <span class="badge">planned</span></h3>
-    <p>Go, .NET, Python, Rust and TypeScript, once the wire behaviour is pinned down by a
-       shared specification and conformance suite. Nothing exists yet — this is a statement
-       of intent, not a roadmap with dates.</p>
+    <p>C# next, then Go, then VB.NET — which rides the C# assembly rather than being a
+       port of its own. Python, Rust and TypeScript after those. Each one is pinned to the
+       same envelope by a shared conformance suite, so a C# consumer reads what a Java
+       producer wrote. Nothing exists yet — this is an order of work, not a roadmap with
+       dates.</p>
   </div>
 
   <h2>Using the Java library</h2>
