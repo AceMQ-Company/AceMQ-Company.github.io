@@ -24,6 +24,10 @@
   .tagline { color:var(--muted); font-size:1.05rem; margin:0; max-width:38rem; }
   h2 { font-size:.8rem; text-transform:uppercase; letter-spacing:.09em;
     color:var(--muted); margin:3rem 0 1rem; font-weight:600; }
+  .family { font-size:1rem; letter-spacing:-.01em; margin:2rem 0 .75rem;
+    padding-bottom:.4rem; border-bottom:1px solid var(--line); font-weight:600; }
+  .family:first-of-type { margin-top:1rem; }
+  .family .count { font-weight:400; color:var(--muted); font-size:.85rem; margin-left:.5rem; }
   .card { background:var(--card); border:1px solid var(--line); border-radius:10px;
     padding:1.4rem 1.5rem; margin-bottom:1rem; }
   .card h3 { margin:0 0 .35rem; font-size:1.15rem; letter-spacing:-.01em; }
@@ -54,6 +58,8 @@
   </header>
 
   <h2>Libraries</h2>
+
+  <h3 class="family">JVM<span class="count">Java, Spring Boot</span></h3>
 
   <div class="card">
     <h3><a href="https://github.com/AceMQ-Company/acemq-java-amqp">AceMQ for Java</a>
@@ -123,6 +129,8 @@
     </div>
   </div>
 
+  <h3 class="family">.NET<span class="count">C#, VB.NET</span></h3>
+
   <div class="card">
     <h3><a href="https://github.com/AceMQ-Company/acemq-dotnet-amqp">AceMQ for .NET</a>
         <span class="badge live">0.1.7</span></h3>
@@ -143,6 +151,8 @@
     </div>
   </div>
 
+  <h3 class="family">Go</h3>
+
   <div class="card">
     <h3><a href="https://github.com/AceMQ-Company/acemq-go-amqp">AceMQ for Go</a>
         <span class="badge">unreleased</span></h3>
@@ -158,16 +168,18 @@
       <a href="https://acemq.org/acemq-go-amqp/publishing.html">Publishing</a>
       <a href="https://acemq.org/acemq-go-amqp/consuming.html">Consuming</a>
       <a href="https://acemq.org/acemq-go-amqp/envelope.html">The envelope</a>
-      <a href="https://pkg.go.dev/github.com/AceMQ-Company/acemq-go-amqp">pkg.go.dev</a>
+      <a href="https://pkg.go.dev/github.com/AceMQ-Company/acemq-go-amqp/amqp">pkg.go.dev</a>
       <a href="https://github.com/AceMQ-Company/acemq-go-amqp">GitHub</a>
     </div>
   </div>
 
+  <h3 class="family">Dynamic languages</h3>
+
   <div class="card planned">
-    <h3>Further ports <span class="badge">planned</span></h3>
-    <p>Python, Rust and TypeScript. Each one is pinned to the same envelope by a shared
-       conformance suite, so a Go consumer reads what a Java producer wrote. Nothing exists
-       yet — this is an order of work, not a roadmap with dates.</p>
+    <h3>Python and Ruby <span class="badge">planned</span></h3>
+    <p>Next after Go, then Rust and TypeScript. Each one is pinned to the same envelope by
+       a shared conformance suite, so a Python consumer reads what a Java producer wrote.
+       Nothing exists yet — this is an order of work, not a roadmap with dates.</p>
   </div>
 
   <h2>Using the Java library</h2>
