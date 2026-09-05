@@ -143,11 +143,31 @@
     </div>
   </div>
 
+  <div class="card">
+    <h3><a href="https://github.com/AceMQ-Company/acemq-go-amqp">AceMQ for Go</a>
+        <span class="badge">unreleased</span></h3>
+    <p>AMQP for Go, with a core that has no dependencies outside the standard library — the
+       RabbitMQ transport lives in a subpackage, so a program that only uses the in-memory
+       broker never links an AMQP client. Publishing, consumers that return their disposition
+       rather than calling a method, topology, retries and dead-lettering, tested against a
+       real broker in CI. The envelope is pinned to Java's by the same fixtures the .NET
+       library uses. On the main branch and documented; no version has been tagged.</p>
+    <div class="links">
+      <a href="https://acemq.org/acemq-go-amqp/">Documentation</a>
+      <a href="https://acemq.org/acemq-go-amqp/getting-started.html">Getting started</a>
+      <a href="https://acemq.org/acemq-go-amqp/publishing.html">Publishing</a>
+      <a href="https://acemq.org/acemq-go-amqp/consuming.html">Consuming</a>
+      <a href="https://acemq.org/acemq-go-amqp/envelope.html">The envelope</a>
+      <a href="https://pkg.go.dev/github.com/AceMQ-Company/acemq-go-amqp">pkg.go.dev</a>
+      <a href="https://github.com/AceMQ-Company/acemq-go-amqp">GitHub</a>
+    </div>
+  </div>
+
   <div class="card planned">
     <h3>Further ports <span class="badge">planned</span></h3>
-    <p>Go next, then Python, Rust and TypeScript. Each one is pinned to the same envelope by
-       a shared conformance suite, so a Go consumer reads what a Java producer wrote. Nothing
-       exists yet — this is an order of work, not a roadmap with dates.</p>
+    <p>Python, Rust and TypeScript. Each one is pinned to the same envelope by a shared
+       conformance suite, so a Go consumer reads what a Java producer wrote. Nothing exists
+       yet — this is an order of work, not a roadmap with dates.</p>
   </div>
 
   <h2>Using the Java library</h2>
