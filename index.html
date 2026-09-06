@@ -155,13 +155,14 @@
 
   <div class="card">
     <h3><a href="https://github.com/AceMQ-Company/acemq-go-amqp">AceMQ for Go</a>
-        <span class="badge">unreleased</span></h3>
+        <span class="badge live">0.1.0</span></h3>
     <p>AMQP for Go, with a core that has no dependencies outside the standard library — the
        RabbitMQ transport lives in a subpackage, so a program that only uses the in-memory
        broker never links an AMQP client. Publishing, consumers that return their disposition
        rather than calling a method, topology, retries and dead-lettering, tested against a
        real broker in CI. The envelope is pinned to Java's by the same fixtures the .NET
-       library uses. On the main branch and documented; no version has been tagged.</p>
+       library uses. Connections recover by themselves, and the five extra codec
+       formats are modules of their own so the core keeps one dependency.</p>
     <div class="links">
       <a href="https://acemq.org/acemq-go-amqp/">Documentation</a>
       <a href="https://acemq.org/acemq-go-amqp/getting-started.html">Getting started</a>
