@@ -58,6 +58,9 @@
   </header>
 
   <h2>Libraries</h2>
+  <!-- The Java release job rewrites every bare 0.x.y on this page to its own
+       version. Badges no release job owns carry a v prefix (and other versions
+       in prose use &#46;) so that rewrite leaves them alone. -->
 
   <h3 class="family">JVM<span class="count">Java, Spring Boot</span></h3>
 
@@ -87,7 +90,7 @@
 
   <div class="card">
     <h3><a href="https://github.com/AceMQ-Company/acemq-java-amqp-spring-boot-starter">Spring Boot starter</a>
-        <span class="badge live">0.7.13</span></h3>
+        <span class="badge live">v0.2.1</span></h3>
     <p>Auto-configuration for the Java library: one connection, a declared topology,
        annotated listeners, health and metrics — configured from application.yaml.
        <strong>Spring Boot 3 and 4 from one artifact</strong>, and the auto-configure
@@ -101,7 +104,7 @@
 
   <div class="card">
     <h3><a href="https://github.com/AceMQ-Company/acemq-java-rabbitmq-admin">RabbitMQ Admin</a>
-        <span class="badge live">0.7.13</span></h3>
+        <span class="badge live">v0.1.2</span></h3>
     <p>RabbitMQ's HTTP management API for Java: users, vhosts, permissions, policies,
        federation and shovels, health checks, definitions export and import, and the
        queue facts AMQP cannot report. Deliberately separate from the messaging
@@ -117,7 +120,7 @@
 
   <div class="card">
     <h3><a href="https://github.com/AceMQ-Company/acemq-java-amqp-workloads">Workloads</a>
-        <span class="badge live">0.7.13</span></h3>
+        <span class="badge live">v0.7.0</span></h3>
     <p>A load generator for AMQP brokers: a workload DSL, an open-loop rate schedule
        that measures latency against intended send time rather than actual, and a
        report that says what it measured rather than what you should conclude.</p>
@@ -139,7 +142,7 @@
        transport included. Publishing with confirms, consumers with explicit dispositions,
        topology, retries and dead-lettering, tested against a real broker in CI. The envelope
        is pinned to Java's by fixtures generated from it rather than copied from its
-       documentation. Nothing is published to a package feed yet.</p>
+       documentation.</p>
     <div class="links">
       <a href="https://acemq-company.github.io/acemq-dotnet-amqp/">Documentation</a>
       <a href="https://acemq-company.github.io/acemq-dotnet-amqp/publishing.html">Publishing</a>
@@ -148,6 +151,19 @@
       <a href="https://acemq-company.github.io/acemq-dotnet-amqp/vbnet.html">VB.NET</a>
       <a href="https://acemq-company.github.io/acemq-dotnet-amqp/envelope.html">The envelope</a>
       <a href="https://github.com/AceMQ-Company/acemq-dotnet-amqp">GitHub</a>
+      <a href="https://acemq.org/nuget/">Artifacts</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://github.com/AceMQ-Company/acemq-dotnet-amqp-hosting">Hosting</a>
+        <span class="badge live">v0.2.1</span></h3>
+    <p>Dependency injection and hosted-service integration for the .NET library:
+       <code>AddAceMq</code>, a <code>BackgroundService</code> consumer host, and health checks.
+       Built on AceMQ for .NET 0&#46;7&#46;11.</p>
+    <div class="links">
+      <a href="https://acemq.org/acemq-dotnet-amqp-hosting/">Documentation</a>
+      <a href="https://github.com/AceMQ-Company/acemq-dotnet-amqp-hosting">GitHub</a>
     </div>
   </div>
 
@@ -155,7 +171,7 @@
 
   <div class="card">
     <h3><a href="https://github.com/AceMQ-Company/acemq-go-amqp">AceMQ for Go</a>
-        <span class="badge live">0.7.13</span></h3>
+        <span class="badge live">v0.9.6</span></h3>
     <p>AMQP for Go, with a core that has no dependencies outside the standard library — the
        RabbitMQ transport lives in a subpackage, so a program that only uses the in-memory
        broker never links an AMQP client. Publishing, consumers that return their disposition
@@ -176,11 +192,50 @@
 
   <h3 class="family">Dynamic languages</h3>
 
-  <div class="card planned">
-    <h3>Python and Ruby <span class="badge">planned</span></h3>
-    <p>Next after Go, then Rust and TypeScript. Each one is pinned to the same envelope by
-       a shared conformance suite, so a Python consumer reads what a Java producer wrote.
-       Nothing exists yet — this is an order of work, not a roadmap with dates.</p>
+  <div class="card">
+    <h3><a href="https://github.com/AceMQ-Company/acemq-python-amqp">AceMQ for Python</a>
+        <span class="badge live">v0.7.9</span></h3>
+    <p>AMQP for Python, pinned to the same envelope as the other libraries by a shared
+       conformance suite, so a Python consumer reads what a Java producer wrote.</p>
+    <div class="links">
+      <a href="https://acemq.org/acemq-python-amqp/">Documentation</a>
+      <a href="https://github.com/AceMQ-Company/acemq-python-amqp">GitHub</a>
+      <a href="https://acemq.org/pypi/">Artifacts</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://github.com/AceMQ-Company/acemq-python-amqp-fastapi">FastAPI integration</a>
+        <span class="badge live">v0.1.2</span></h3>
+    <p>A lifespan that owns the connection and consumers, and dependencies for publishing
+       from a route. Requires <code>acemq-amqp&gt;=0&#46;7&#46;9</code>.</p>
+    <div class="links">
+      <a href="https://acemq.org/acemq-python-amqp-fastapi/">Documentation</a>
+      <a href="https://github.com/AceMQ-Company/acemq-python-amqp-fastapi">GitHub</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://github.com/AceMQ-Company/acemq-ruby-amqp">AceMQ for Ruby</a>
+        <span class="badge live">v0.7.11</span></h3>
+    <p>AMQP for Ruby, held to the same envelope and conformance suite as every other
+       AceMQ library.</p>
+    <div class="links">
+      <a href="https://acemq.org/acemq-ruby-amqp/">Documentation</a>
+      <a href="https://github.com/AceMQ-Company/acemq-ruby-amqp">GitHub</a>
+      <a href="https://acemq.org/gems/">Artifacts</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://github.com/AceMQ-Company/acemq-ruby-amqp-rails">Rails integration</a>
+        <span class="badge live">v0.2.1</span></h3>
+    <p>A Railtie, configuration under <code>config.acemq</code>, and a consumer process for
+       running handlers outside the web server. Requires <code>acemq-amqp ~&gt; 0&#46;7&#46;11</code>.</p>
+    <div class="links">
+      <a href="https://acemq.org/acemq-ruby-amqp-rails/">Documentation</a>
+      <a href="https://github.com/AceMQ-Company/acemq-ruby-amqp-rails">GitHub</a>
+    </div>
   </div>
 
   <h2>Using the Java library</h2>
@@ -222,18 +277,29 @@
   </div>
 
   <div class="card">
-    <h3><a href="https://acemq-company.github.io/nuget/">NuGet feed</a>
-        <span class="badge">empty</span></h3>
+    <h3><a href="https://acemq-company.github.io/nuget/">NuGet feed</a></h3>
     <p>A static NuGet v3 feed on the same terms — readable without credentials, and
        published by committing rather than pushing. <code>dotnet restore</code>,
        <code>dotnet add package</code> and floating versions all work against it;
-       search does not, because a static host cannot serve that resource. Nothing is
-       published yet: the .NET library implements the envelope and cannot yet send a
-       message.</p>
+       search does not, because a static host cannot serve that resource.</p>
     <div class="links">
       <a href="https://acemq-company.github.io/nuget/">Browse</a>
       <a href="https://github.com/AceMQ-Company/nuget">GitHub</a>
     </div>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://acemq.org/pypi/">Python package index</a></h3>
+    <p>A static index for the Python library and its integrations, readable without
+       credentials — point <code>pip</code> at it with <code>--extra-index-url</code>.</p>
+    <div class="links"><a href="https://acemq.org/pypi/">Browse</a></div>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://acemq.org/gems/">Gem source</a></h3>
+    <p>A static gem source for the Ruby library and its Rails integration, readable
+       without credentials — add it as a <code>source</code> in your Gemfile.</p>
+    <div class="links"><a href="https://acemq.org/gems/">Browse</a></div>
   </div>
 
   <h2>Support</h2>
